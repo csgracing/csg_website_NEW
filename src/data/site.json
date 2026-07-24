@@ -1,0 +1,9 @@
+{
+  "name": "City St George's Racing",
+  "shortName": "CSG Racing",
+  "description": "Formula Student team of City St George's, University of London.",
+  "university": "City St George's, University of London",
+  "nav": [
+    { "label": "Home", "href": "/" }
+  ]
+}
