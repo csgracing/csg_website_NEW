@@ -1,6 +1,8 @@
 export interface NavItem {
   label: string;
+  shortLabel: string;
   href: string;
+  dropdown?: "cars" | "teams";
 }
 
 export interface SiteConfig {
@@ -12,7 +14,7 @@ export interface SiteConfig {
 }
 
 export interface SocialLink {
-  platform: "instagram" | "linkedin" | "youtube" | "tiktok" | "x";
+  platform: "instagram" | "tiktok" | "linkedin" | "email";
   label: string;
   url: string;
 }
