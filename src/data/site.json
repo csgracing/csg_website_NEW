@@ -4,6 +4,11 @@
   "description": "Formula Student team of City St George's, University of London.",
   "university": "City St George's, University of London",
   "nav": [
-    { "label": "Home", "href": "/" }
+    { "label": "About Us", "shortLabel": "About", "href": "/about-us" },
+    { "label": "Our Cars", "shortLabel": "Cars", "href": "/our-cars", "dropdown": "cars" },
+    { "label": "The Teams", "shortLabel": "Teams", "href": "/the-teams", "dropdown": "teams" },
+    { "label": "Gallery", "shortLabel": "Gallery", "href": "/gallery" },
+    { "label": "Our Sponsors", "shortLabel": "Sponsors", "href": "/our-sponsors" },
+    { "label": "Contact Us", "shortLabel": "Contact", "href": "/contact-us" }
   ]
 }
