@@ -2,21 +2,26 @@
   {
     "platform": "instagram",
     "label": "Instagram",
-    "url": "https://www.instagram.com/REPLACE_ME/"
+    "url": "https://www.instagram.com/csg.racing/"
   },
   {
     "platform": "tiktok",
     "label": "TikTok",
-    "url": "https://www.tiktok.com/@REPLACE_ME"
+    "url": "https://www.tiktok.com/@csg.racing"
   },
   {
     "platform": "linkedin",
     "label": "LinkedIn",
-    "url": "https://www.linkedin.com/company/REPLACE_ME/"
+    "url": "https://www.linkedin.com/company/csgracing/"
   },
   {
     "platform": "email",
     "label": "Email",
-    "url": "mailto:REPLACE_ME@csg.racing"
+    "url": "mailto:team@csg.racing"
+  },
+  {
+    "platform": "facebook",
+    "label": "Facebook",
+    "url": "https://www.facebook.com/profile.php?id=61583516661171"
   }
 ]
