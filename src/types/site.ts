@@ -10,11 +10,12 @@ export interface SiteConfig {
   shortName: string;
   description: string;
   university: string;
+  address: string;
   nav: NavItem[];
 }
 
 export interface SocialLink {
-  platform: "instagram" | "tiktok" | "linkedin" | "email";
+  platform: "instagram" | "tiktok" | "linkedin" | "email" | "facebook";
   label: string;
   url: string;
 }

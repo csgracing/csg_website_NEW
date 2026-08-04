@@ -3,6 +3,7 @@
   "shortName": "CSG Racing",
   "description": "Formula Student team of City St George's, University of London.",
   "university": "City St George's, University of London",
+  "address": "Northampton Square, London EC1V 0HB",
   "nav": [
     { "label": "About Us", "shortLabel": "About", "href": "/about-us" },
     { "label": "Our Cars", "shortLabel": "Cars", "href": "/our-cars", "dropdown": "cars" },
