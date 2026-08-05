@@ -10,6 +10,6 @@
     { "label": "The Teams", "shortLabel": "Teams", "href": "/the-teams", "dropdown": "teams" },
     { "label": "Gallery", "shortLabel": "Gallery", "href": "/gallery" },
     { "label": "Our Sponsors", "shortLabel": "Sponsors", "href": "/our-sponsors" },
-    { "label": "Contact Us", "shortLabel": "Contact", "href": "/contact-us" }
+    { "label": "Contact Us", "shortLabel": "Contact Us", "href": "/contact-us" }
   ]
 }

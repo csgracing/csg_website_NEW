@@ -1,0 +1,15 @@
+<svg width="96" height="120" viewBox="0 0 96 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- CSG Racing footer map pin: red teardrop + checkered-flag badge. -->
+  <path d="M48 0C21.49 0 0 21.49 0 48c0 33 48 72 48 72s48-39 48-72C96 21.49 74.51 0 48 0z" fill="#c41414"/>
+  <circle cx="48" cy="46" r="30" fill="#ffffff"/>
+  <g>
+    <rect x="30" y="28" width="9" height="9" fill="#0d0d0d"/>
+    <rect x="48" y="28" width="9" height="9" fill="#0d0d0d"/>
+    <rect x="39" y="37" width="9" height="9" fill="#0d0d0d"/>
+    <rect x="57" y="37" width="9" height="9" fill="#0d0d0d"/>
+    <rect x="30" y="46" width="9" height="9" fill="#0d0d0d"/>
+    <rect x="48" y="46" width="9" height="9" fill="#0d0d0d"/>
+    <rect x="39" y="55" width="9" height="9" fill="#0d0d0d"/>
+    <rect x="57" y="55" width="9" height="9" fill="#0d0d0d"/>
+  </g>
+</svg>
