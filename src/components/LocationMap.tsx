@@ -1,33 +1,63 @@
 "use client";
 
 import "leaflet/dist/leaflet.css";
+import "./LocationMap.css";
 import L from "leaflet";
-import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+import { MapContainer, Marker, TileLayer } from "react-leaflet";
+import { getSiteConfig } from "@/lib/data";
 
 // City St George's, University of London — Northampton Square, London EC1V 0HB
 const position: [number, number] = [51.5277, -0.1024];
 
-const pinIcon = L.divIcon({
+// CartoDB "dark_all" — free, no API key. Swap to `light_all` for the
+// grey/light variant if dark ever reads too heavy against the white footer.
+const TILE_URL = "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png";
+
+const MASCOT_ICON_URL = "/images/mascot-pin.svg";
+const MASCOT_ICON_SIZE: [number, number] = [50, 62];
+
+// Leaflet positions markers via inline `transform`, which fights any CSS
+// animation/hover transform on that same element (the marker snaps to the
+// map's corner mid-bounce). Wrapping the image in a divIcon shell keeps
+// Leaflet's transform on the outer wrapper and leaves the inner
+// `<img class="mascot-marker">` (animated in LocationMap.css) free to move.
+const mascotIcon = L.divIcon({
   className: "",
-  html: `<svg width="32" height="40" viewBox="0 0 32 40" xmlns="http://www.w3.org/2000/svg">
-    <path d="M16 0C7.163 0 0 7.163 0 16c0 11 16 24 16 24s16-13 16-24C32 7.163 24.837 0 16 0z" fill="#c41414"/>
-    <circle cx="16" cy="15" r="6" fill="#ffffff"/>
-  </svg>`,
-  iconSize: [32, 40],
-  iconAnchor: [16, 40],
-  popupAnchor: [0, -36],
+  html: `<img src="${MASCOT_ICON_URL}" class="mascot-marker" width="${MASCOT_ICON_SIZE[0]}" height="${MASCOT_ICON_SIZE[1]}" alt="" />`,
+  iconSize: MASCOT_ICON_SIZE,
+  iconAnchor: [MASCOT_ICON_SIZE[0] / 2, MASCOT_ICON_SIZE[1]],
 });
 
 export function LocationMap() {
+  const site = getSiteConfig();
+  const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(site.address)}`;
+
   return (
-    <MapContainer center={position} zoom={15} scrollWheelZoom={false} className="h-full w-full">
-      <TileLayer
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+    <MapContainer
+      center={position}
+      zoom={15}
+      // Footer embed, not a full map page — locked down except dragging.
+      zoomControl={false}
+      scrollWheelZoom={false}
+      dragging={true}
+      doubleClickZoom={false}
+      touchZoom={false}
+      boxZoom={false}
+      keyboard={false}
+      // Replaced by MapEmbed's own compact "i" attribution control.
+      attributionControl={false}
+      className="csg-map h-full w-full"
+    >
+      <TileLayer url={TILE_URL} />
+      {/* Clicking the pin opens Google Maps directly (via Leaflet's click
+          event, not a nested <a>, which Leaflet's own handling can swallow). */}
+      <Marker
+        position={position}
+        icon={mascotIcon}
+        eventHandlers={{
+          click: () => window.open(mapsUrl, "_blank", "noopener,noreferrer"),
+        }}
       />
-      <Marker position={position} icon={pinIcon}>
-        <Popup>City St George&apos;s, University of London</Popup>
-      </Marker>
     </MapContainer>
   );
 }

@@ -1,0 +1,41 @@
+/* CartoDB's dark_all tiles are very dark (background ~0-13/255, roads only
+   ~68/255) and read as a plain black square from a distance. brightness
+   barely moves the near-zero background while lifting the roads/labels;
+   contrast keeps the rest from washing out grey. */
+.csg-map .leaflet-tile-pane {
+  filter: brightness(2.6) contrast(1.35);
+}
+
+.mascot-marker {
+  /* `backwards`, not `both`: `both` would freeze `transform` at the
+     keyframe's end value forever, blocking the :hover transform below. */
+  animation: mascot-drop-in 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+  animation-delay: 0.15s;
+  transition: transform 0.2s ease-out;
+  transform-origin: bottom center;
+  cursor: pointer;
+}
+
+.mascot-marker:hover {
+  transform: scale(1.08) rotate(-4deg);
+}
+
+@keyframes mascot-drop-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-24px) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mascot-marker {
+    animation: none;
+  }
+  .mascot-marker:hover {
+    transform: none;
+  }
+}

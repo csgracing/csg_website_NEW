@@ -8,8 +8,9 @@ import { Icon } from "@/components/Icon";
 import type { SeasonEntry } from "@/types/season";
 
 const site = getSiteConfig();
-// Facebook lives in the footer's link row only, not the corner icon grid.
-const socials = getSocialLinks().filter((social) => social.platform !== "facebook");
+// Email lives in the footer's Contact Us instead — not a "follow us"
+// platform, and avoids exposing a scrapeable mailto. Facebook takes its spot.
+const socials = getSocialLinks().filter((social) => social.platform !== "email");
 
 const dropdownEntries: Record<"cars" | "teams", SeasonEntry[]> = {
   cars: getCarSeasons(),
@@ -23,13 +24,14 @@ const TOP_THRESHOLD_PX = 120;
 
 function SocialIcons({ className = "" }: { className?: string }) {
   return (
-    <div className={`grid shrink-0 grid-cols-2 grid-rows-2 gap-x-3 gap-y-1.5 ${className}`}>
+    // gap-3 on both axes so the 2x2 grid stays square, not wider than tall.
+    <div className={`grid shrink-0 grid-cols-2 grid-rows-2 gap-3 ${className}`}>
       {socials.map((social) => (
         <a
           key={social.platform}
           href={social.url}
-          target={social.platform === "email" ? undefined : "_blank"}
-          rel={social.platform === "email" ? undefined : "noopener noreferrer"}
+          target="_blank"
+          rel="noopener noreferrer"
           aria-label={social.label}
           className="flex items-center justify-center text-white transition-colors hover:text-brand"
         >
@@ -78,7 +80,10 @@ export function Header() {
     >
       <nav className="flex items-center justify-between gap-6 px-6 py-3">
         <div className="flex items-center gap-6">
-          <Link href="/" className="flex shrink-0 items-center" aria-label={`${site.shortName} home`}>
+          {/* Plain <a>, not next/link: forces a full navigation so the
+              footer map (and any other page state) always resets, even
+              when already on "/" where a Link would be a client-side no-op. */}
+          <a href="/" className="flex shrink-0 items-center" aria-label={`${site.shortName} home`}>
             <Image
               src="/images/csg-racing-logo.png"
               alt={site.shortName}
@@ -87,7 +92,7 @@ export function Header() {
               priority
               className="h-9 w-auto"
             />
-          </Link>
+          </a>
 
           <ul className="hidden flex-wrap items-center gap-3 text-sm font-bold tracking-wide uppercase md:flex">
             {site.nav.map((item) => {

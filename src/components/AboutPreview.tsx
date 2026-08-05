@@ -1,6 +1,6 @@
 export function AboutPreview() {
   return (
-    <section className="flex min-h-screen flex-col justify-center bg-white px-6 py-20 text-[#0d0d0d]">
+    <section className="flex flex-col justify-center bg-white px-6 py-16 text-[#0d0d0d]">
       <div className="mx-auto w-full max-w-6xl">
         <p className="text-sm font-bold tracking-wide text-brand uppercase">Placeholder Subtitle</p>
 
