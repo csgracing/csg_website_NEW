@@ -10,7 +10,7 @@ export default function TheTeamsPage() {
   const [latest] = getTeamSeasons();
 
   if (!latest) {
-    return <PlaceholderPage title="The Team" />;
+    return <PlaceholderPage title="The Team" minHeightClassName="min-h-[120vh]" />;
   }
 
   redirect(`/the-teams/${latest.slug}`);
