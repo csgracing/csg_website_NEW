@@ -1,10 +1,16 @@
 [
   {
     "slug": "fsuk-concept-2024-2025",
-    "title": "FSUK Concept: 2024-2025 Season"
+    "title": "FSUK Concept: 2024-2025 Season",
+    "backgroundImage": "/images/teams/fsuk-concept-2024-2025-hero.jpg",
+    "backgroundPosition": "center 40%",
+    "pageTitle": "2024-2025 Season"
   },
   {
     "slug": "fsuk-drive-2025-2026",
-    "title": "FSUK Drive: 2025-2026 Season"
+    "title": "FSUK Drive: 2025-2026 Season",
+    "backgroundImage": "/images/teams/fsuk-drive-2025-2026-hero.jpg",
+    "backgroundPosition": "center 35%",
+    "pageTitle": "2025-2026 Season"
   }
 ]
