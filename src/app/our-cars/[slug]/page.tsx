@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { PlaceholderPage } from "@/components/PlaceholderPage";
+import { PageHero } from "@/components/PageHero";
 import { getCarSeasonBySlug, getCarSeasons } from "@/lib/data";
 
 // Whether `slug` is the newest season (getCarSeasons() is sorted
@@ -40,5 +40,5 @@ export default async function CarSeasonPage({
 
   const title = isLatestCarSeason(slug) ? "Our Car" : season.title;
 
-  return <PlaceholderPage title={title} />;
+  return <PageHero title={title} />;
 }

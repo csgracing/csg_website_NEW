@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import { PlaceholderPage } from "@/components/PlaceholderPage";
+import { PageHero } from "@/components/PageHero";
 import { GalleryGrid, type GallerySeason } from "@/components/GalleryGrid";
-import { SectionDivider } from "@/components/SectionDivider";
 import { getTeamSeasons } from "@/lib/data";
 
 export const metadata: Metadata = {
@@ -30,8 +29,7 @@ export default function GalleryPage() {
 
   return (
     <>
-      <PlaceholderPage title="Gallery" minHeightClassName="min-h-[60vh]" blurredBlackBackground />
-      <SectionDivider />
+      <PageHero title="Gallery" />
       <GalleryGrid seasons={gallerySeasons} />
     </>
   );
