@@ -93,7 +93,7 @@ export function PlaceholderPage({
         </>
       )}
 
-      <h1 className="relative text-3xl font-semibold">{title}</h1>
+      <h1 className="relative text-4xl font-semibold tracking-tight uppercase sm:text-5xl">{title}</h1>
     </div>
   );
 }
