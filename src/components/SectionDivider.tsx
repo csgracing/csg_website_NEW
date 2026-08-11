@@ -3,7 +3,7 @@
 // logos and no animation, just an empty rectangle.
 export function SectionDivider({
   heightClassName = "h-3",
-  borderClassName = "border-t border-t-brand/40 border-b-[3px] border-b-brand",
+  borderClassName = "border-t-2 border-t-brand/40 border-b-[3px] border-b-brand",
 }: {
   heightClassName?: string;
   borderClassName?: string;
