@@ -1,10 +1,38 @@
 import type { Metadata } from "next";
 import { PlaceholderPage } from "@/components/PlaceholderPage";
+import { GalleryGrid, type GallerySeason } from "@/components/GalleryGrid";
+import { SectionDivider } from "@/components/SectionDivider";
+import { getTeamSeasons } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Gallery",
 };
 
+// Placeholder box count until real photos are in — split evenly across
+// whatever seasons exist, with any remainder going to the newest one(s).
+const TOTAL_PLACEHOLDER_PHOTOS = 50;
+
 export default function GalleryPage() {
-  return <PlaceholderPage title="Gallery" />;
+  const seasons = getTeamSeasons(); // newest first
+  const base = Math.floor(TOTAL_PLACEHOLDER_PHOTOS / seasons.length);
+  const remainder = TOTAL_PLACEHOLDER_PHOTOS % seasons.length;
+
+  const gallerySeasons: GallerySeason[] = seasons.map((season, index) => {
+    const yearMatch = season.slug.match(/(\d{4}-\d{4})/);
+
+    return {
+      slug: season.slug,
+      label: season.title,
+      shortLabel: yearMatch ? yearMatch[1] : season.title,
+      count: base + (index < remainder ? 1 : 0),
+    };
+  });
+
+  return (
+    <>
+      <PlaceholderPage title="Gallery" minHeightClassName="min-h-[60vh]" blurredBlackBackground />
+      <SectionDivider />
+      <GalleryGrid seasons={gallerySeasons} />
+    </>
+  );
 }
