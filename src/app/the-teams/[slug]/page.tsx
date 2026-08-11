@@ -52,6 +52,8 @@ export default async function TeamSeasonPage({
       minHeightClassName="min-h-[60vh]"
       backgroundImageSrc={season.backgroundImage}
       backgroundPosition={season.backgroundPosition}
+      showDivider
+      dividerBorderClassName="border-t-2 border-t-background/40 border-b-[3px] border-b-brand"
     />
   );
 }
