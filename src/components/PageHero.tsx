@@ -1,5 +1,4 @@
 import { PlaceholderPage } from "@/components/PlaceholderPage";
-import { SectionDivider } from "@/components/SectionDivider";
 
 // Shared title-section design — taller blurred-black hero + the red-edged
 // divider bar beneath it (first built for the Gallery page). Every page
@@ -7,9 +6,6 @@ import { SectionDivider } from "@/components/SectionDivider";
 // as one consistent system instead of each re-implementing the same look.
 export function PageHero({ title }: { title: string }) {
   return (
-    <>
-      <PlaceholderPage title={title} minHeightClassName="min-h-[60vh]" blurredBlackBackground />
-      <SectionDivider />
-    </>
+    <PlaceholderPage title={title} minHeightClassName="min-h-[60vh]" blurredBlackBackground showDivider />
   );
 }
