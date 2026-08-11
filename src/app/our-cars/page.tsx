@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation";
-import { PlaceholderPage } from "@/components/PlaceholderPage";
+import { PageHero } from "@/components/PageHero";
 import { getCarSeasons } from "@/lib/data";
 
 // Stands in for "whichever season is current" — hands off to that season's
@@ -10,7 +10,7 @@ export default function OurCarsPage() {
   const [latest] = getCarSeasons();
 
   if (!latest) {
-    return <PlaceholderPage title="Our Cars" />;
+    return <PageHero title="Our Cars" />;
   }
 
   redirect(`/our-cars/${latest.slug}`);

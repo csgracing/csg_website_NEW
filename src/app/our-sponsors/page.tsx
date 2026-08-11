@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { PlaceholderPage } from "@/components/PlaceholderPage";
+import { PageHero } from "@/components/PageHero";
 
 export const metadata: Metadata = {
   title: "Our Sponsors",
 };
 
 export default function OurSponsorsPage() {
-  return <PlaceholderPage title="Our Sponsors" />;
+  return <PageHero title="Our Sponsors" />;
 }
