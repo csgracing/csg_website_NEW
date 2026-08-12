@@ -15,7 +15,7 @@ export function getSocialLinks(): SocialLink[] {
   return socialsJson as SocialLink[];
 }
 
-// Slugs and titles both end in a "YYYY-YYYY" season, e.g. "fsuk-drive-2025-2026".
+// Slugs and titles both end in a "YYYY-YYYY" season, e.g. "fsuk-class-1-2025-2026".
 // Sort newest season first so dropdowns and listings show the most recent work up top.
 function byMostRecentSeason(entries: SeasonEntry[]): SeasonEntry[] {
   const startYear = (entry: SeasonEntry) => {

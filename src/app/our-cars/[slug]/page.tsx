@@ -1,13 +1,29 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
+import { CarShowcase } from "@/components/CarShowcase";
+import { CarNameOrigin } from "@/components/CarNameOrigin";
+import { CarSpecs } from "@/components/CarSpecs";
+import { CarCompetitionRecap } from "@/components/CarCompetitionRecap";
 import { getCarSeasonBySlug, getCarSeasons } from "@/lib/data";
 
+// Car titles are "NAME, YYYY-YYYY Season" — the showcase heading only wants
+// the name itself.
+function carNameFrom(title: string) {
+  return title.split(",")[0].trim();
+}
+
 // Whether `slug` is the newest season (getCarSeasons() is sorted
-// newest-first) — that page always titles itself "Our Car" regardless of
-// whether it's reached via /our-cars or its own dropdown entry.
+// newest-first) — that page titles itself "Our Car" by default, regardless
+// of whether it's reached via /our-cars or its own dropdown entry, unless
+// the season sets its own pageTitle override.
 function isLatestCarSeason(slug: string) {
   return getCarSeasons()[0]?.slug === slug;
+}
+
+// on-page heading only — the nav dropdown always uses `title` directly.
+function pageTitleFor(slug: string, season: { title: string; pageTitle?: string }) {
+  return season.pageTitle ?? (isLatestCarSeason(slug) ? "Our Car" : season.title);
 }
 
 export function generateStaticParams() {
@@ -23,7 +39,7 @@ export async function generateMetadata({
   const season = getCarSeasonBySlug(slug);
   if (!season) return { title: "Our Cars" };
 
-  return { title: isLatestCarSeason(slug) ? "Our Car" : season.title };
+  return { title: pageTitleFor(slug, season) };
 }
 
 export default async function CarSeasonPage({
@@ -38,7 +54,15 @@ export default async function CarSeasonPage({
     notFound();
   }
 
-  const title = isLatestCarSeason(slug) ? "Our Car" : season.title;
+  const title = pageTitleFor(slug, season);
 
-  return <PageHero title={title} />;
+  return (
+    <>
+      <PageHero title={title} />
+      <CarShowcase carName={carNameFrom(season.title)} />
+      <CarNameOrigin />
+      <CarSpecs />
+      <CarCompetitionRecap />
+    </>
+  );
 }
