@@ -133,10 +133,10 @@ export function Header() {
                               className="group table-row transition-colors hover:bg-brand/20"
                             >
                               <Link href={`${item.href}/${entry.slug}`} className="contents">
-                                <span className="table-cell whitespace-nowrap py-2 pl-4 text-right normal-case transition-colors group-hover:text-brand">
+                                <span className="table-cell whitespace-nowrap py-2 pl-4 text-left normal-case transition-colors group-hover:text-brand">
                                   {season ? `${label}:` : label}
                                 </span>
-                                <span className="table-cell whitespace-nowrap py-2 pr-4 pl-1 normal-case transition-colors group-hover:text-brand">
+                                <span className="table-cell whitespace-nowrap py-2 pr-4 pl-1 text-left normal-case transition-colors group-hover:text-brand">
                                   {season}
                                 </span>
                               </Link>
