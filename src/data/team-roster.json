@@ -257,9 +257,9 @@
                 "role": "Data Acquisition Lead",
                 "course": "BSc Mathematics with Data Science"
               },
-              { "name": "Bushra Aalia", "role": "Team Member", "course": "BSc Mathematics" },
-              { "name": "Ali Bars", "role": "Team Member", "course": "BSc Computer Science" },
-              { "name": "Calum Breen-Chapman", "role": "Team Member", "course": "BSc Computer Science" }
+              { "name": "Bushra Aalia", "role": "DAQ Team Member", "course": "BSc Mathematics" },
+              { "name": "Ali Bars", "role": "DAQ Team Member", "course": "BSc Computer Science" },
+              { "name": "Calum Breen-Chapman", "role": "DAQ Team Member", "course": "BSc Computer Science" }
             ]
           }
         ]
@@ -289,10 +289,10 @@
             "members": [
               {
                 "name": "Manuela Blasquez Barrero",
-                "role": "Media Lead",
+                "role": "Media & Marketing Lead",
                 "course": "BEng Mechanical & Design Engineering"
               },
-              { "name": "Zaynab Uddin", "role": "Team Member", "course": "BEng International Politics" }
+              { "name": "Zaynab Uddin", "role": "M&M Team Member", "course": "BEng International Politics" }
             ]
           }
         ]

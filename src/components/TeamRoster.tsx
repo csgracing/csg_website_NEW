@@ -8,7 +8,6 @@ const THEME = {
     name: "text-white",
     role: "text-white/60",
     course: "text-white/40",
-    placeholder: "border-white/20 bg-white/5 text-white/40",
     treeLine: "border-white/15",
   },
   light: {
@@ -16,24 +15,19 @@ const THEME = {
     name: "text-[#0d0d0d]",
     role: "text-black/60",
     course: "text-black/40",
-    placeholder: "border-black/20 bg-black/5 text-black/40",
     treeLine: "border-black/15",
   },
 } as const;
 
 type Theme = (typeof THEME)[keyof typeof THEME];
 
+const DEFAULT_AVATAR = "/images/team-members/default-avatar.png";
+
 function MemberCard({ member, theme }: { member: TeamMember; theme: Theme }) {
   return (
     <div className="flex w-40 flex-col items-start text-left sm:w-48">
-      <div className={`relative aspect-[4/5] w-full overflow-hidden ${!member.image ? `border border-dashed ${theme.placeholder}` : ""}`}>
-        {member.image ? (
-          <Image src={member.image} alt={member.name} fill style={{ objectFit: "cover" }} />
-        ) : (
-          <div className={`flex h-full w-full items-center justify-center text-center text-xs uppercase ${theme.placeholder}`}>
-            Photo Coming Soon
-          </div>
-        )}
+      <div className="relative aspect-[4/5] w-full overflow-hidden">
+        <Image src={member.image ?? DEFAULT_AVATAR} alt={member.name} fill style={{ objectFit: "cover" }} />
       </div>
       <p className={`mt-3 text-sm font-black tracking-tight uppercase ${theme.name}`}>{member.name}</p>
       <p className={`text-xs ${theme.role}`}>{member.role}</p>
