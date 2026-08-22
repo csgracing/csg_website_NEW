@@ -1,14 +1,23 @@
+import Image from "next/image";
+
 type TimelineEntry =
-  | { type: "car"; season: string; name: string; latest?: boolean }
+  | { type: "car"; season: string; name: string; image?: string; latest?: boolean }
   | { type: "marker"; label: string; icon: "hiatus" | "rebrand" | "today" };
 
 const TIMELINE: TimelineEntry[] = [
-  { type: "car", season: "2016", name: "Car Name TBD" },
-  { type: "car", season: "2018 (est.)", name: "CR18" },
+  { type: "car", season: "2009", name: "CR09", image: "/images/history/cr09.jpg" },
+  { type: "car", season: "2010", name: "CR10", image: "/images/history/cr10.jpg" },
+  { type: "car", season: "2011", name: "Class 2A Entry", image: "/images/history/cr11.jpg" },
+  { type: "car", season: "2012", name: "CR12", image: "/images/history/cr12.jpg" },
+  { type: "car", season: "2013", name: "CR13", image: "/images/history/cr13.jpg" },
+  { type: "car", season: "2015", name: "CR15", image: "/images/history/cr15.jpg" },
+  { type: "car", season: "2016", name: "CR16", image: "/images/history/cr16.jpg" },
+  { type: "car", season: "2017", name: "CR17", image: "/images/history/cr17.png" },
+  { type: "car", season: "2018", name: "CR18", image: "/images/history/cr18.jpg" },
   { type: "marker", label: "7-Year Hiatus", icon: "hiatus" },
   { type: "marker", label: "Rebrand", icon: "rebrand" },
   { type: "car", season: "2024/25", name: "Concept" },
-  { type: "car", season: "2025/26", name: "GRETA", latest: true },
+  { type: "car", season: "2025/26", name: "GRETA (CSG25)", image: "/images/history/greta.jpg", latest: true },
   { type: "marker", label: "Today", icon: "today" },
 ];
 
@@ -20,8 +29,14 @@ const CARD_ALIGN = {
 function TimelineCard({ entry, align }: { entry: Extract<TimelineEntry, { type: "car" }>; align: "left" | "right" }) {
   return (
     <div className={`flex w-full max-w-xs flex-col ${CARD_ALIGN[align]}`}>
-      <div className="flex aspect-[4/3] w-full items-center justify-center border border-dashed border-white/20 bg-white/5 text-sm text-white/40 uppercase">
-        Image placeholder
+      <div className="relative aspect-[4/3] w-full overflow-hidden">
+        {entry.image ? (
+          <Image src={entry.image} alt={`${entry.name} (${entry.season})`} fill style={{ objectFit: "cover" }} />
+        ) : (
+          <div className="flex h-full w-full items-center justify-center border border-dashed border-white/20 bg-white/5 text-sm text-white/40 uppercase">
+            Image placeholder
+          </div>
+        )}
       </div>
       <p className="mt-3 text-sm font-bold tracking-wide text-brand uppercase">{entry.season}</p>
       <p className="text-lg font-black uppercase">{entry.name}</p>
