@@ -1,6 +1,3 @@
-// Car name above a single centered placeholder image, full content-column
-// width (unlike AboutIntro's half-width image) — this section exists to
-// show off the car itself, not to sit next to body copy.
 export function CarShowcase({ carName }: { carName: string }) {
   return (
     <section className="bg-background px-6 pt-12 pb-6 text-center sm:pt-14 sm:pb-10">

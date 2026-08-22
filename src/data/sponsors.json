@@ -1,0 +1,81 @@
+[
+  {
+    "slug": "instmc",
+    "name": "InstMC",
+    "tier": "gold",
+    "logo": "/images/sponsors/instmc.svg",
+    "aboutUrl": "https://www.instmc.org/default.aspx"
+  },
+  {
+    "slug": "vector-informatik",
+    "name": "Vector Informatik",
+    "tier": "gold",
+    "logo": "/images/sponsors/vector-informatik.svg",
+    "aboutUrl": "https://www.vector.com/int/en/company/"
+  },
+  {
+    "slug": "rs",
+    "name": "RS",
+    "tier": "gold",
+    "logo": "/images/sponsors/rs.svg",
+    "aboutUrl": "https://www.rs-online.com/about-us"
+  },
+
+  {
+    "slug": "ansys",
+    "name": "Ansys",
+    "tier": "silver",
+    "logo": "/images/sponsors/ansys.svg",
+    "aboutUrl": "https://www.ansys.com/about-ansys"
+  },
+  {
+    "slug": "solidworks",
+    "name": "SOLIDWORKS",
+    "tier": "silver",
+    "logo": "/images/sponsors/solidworks.svg",
+    "aboutUrl": "https://www.solidworks.com/"
+  },
+  {
+    "slug": "demon-tweeks",
+    "name": "Demon Tweeks",
+    "tier": "silver",
+    "logo": "/images/sponsors/demon-tweeks.png",
+    "aboutUrl": "https://www.demon-tweeks.com/"
+  },
+  {
+    "slug": "aerocomm",
+    "name": "Aerocomm",
+    "tier": "silver",
+    "logo": "/images/sponsors/aerocomm.svg",
+    "aboutUrl": "https://aerocommetals.co.uk/"
+  },
+  {
+    "slug": "igus",
+    "name": "igus",
+    "tier": "silver",
+    "logo": "/images/sponsors/igus.png",
+    "aboutUrl": "https://www.igus.co.uk/"
+  },
+
+  {
+    "slug": "altair",
+    "name": "Altair",
+    "tier": "bronze",
+    "logo": "/images/sponsors/altair.svg",
+    "aboutUrl": "https://www.altair.com/about-us"
+  },
+  {
+    "slug": "rapid-harness",
+    "name": "Rapid Harness",
+    "tier": "bronze",
+    "logo": "/images/sponsors/rapid-harness.png",
+    "aboutUrl": "https://rapidharness.com/"
+  },
+  {
+    "slug": "mathworks",
+    "name": "MathWorks",
+    "tier": "bronze",
+    "logo": "/images/sponsors/mathworks.png",
+    "aboutUrl": "https://www.mathworks.com/company.html"
+  }
+]

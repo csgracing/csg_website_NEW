@@ -7,12 +7,10 @@ export const metadata: Metadata = {
   title: "Gallery",
 };
 
-// Placeholder box count until real photos are in — split evenly across
-// whatever seasons exist, with any remainder going to the newest one(s).
 const TOTAL_PLACEHOLDER_PHOTOS = 50;
 
 export default function GalleryPage() {
-  const seasons = getTeamSeasons(); // newest first
+  const seasons = getTeamSeasons(); 
   const base = Math.floor(TOTAL_PLACEHOLDER_PHOTOS / seasons.length);
   const remainder = TOTAL_PLACEHOLDER_PHOTOS % seasons.length;
 

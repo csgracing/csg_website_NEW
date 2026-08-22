@@ -6,15 +6,10 @@ import { LogoMarquee } from "@/components/LogoMarquee";
 import { JoinUs } from "@/components/JoinUs";
 import { SponsorUs } from "@/components/SponsorUs";
 
-// Shared sizing for every strip between sections — only the border (which
-// side gets the thick brand-red edge, facing whichever section is black)
-// changes per placement.
 const MINI_MARQUEE = {
   heightClassName: "h-6",
   logoHeightClassName: "h-3",
   gapClassName: "gap-16",
-  // See the comment on LogoMarquee's default repeatCount — these logos are
-  // smaller, so a "set" needs more repeats to stay wider than any screen.
   repeatCount: 30,
   durationSeconds: 220,
 } as const;

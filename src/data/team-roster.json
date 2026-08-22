@@ -1,0 +1,302 @@
+{
+  "fsuk-concept-2024-2025": {
+    "theme": "dark",
+    "tagline": "Bringing to you the team that ended our 7-year hiatus.",
+    "leadership": [
+      {
+        "name": "Team Principal",
+        "members": [
+          {
+            "name": "Greta",
+            "role": "Team Principal",
+            "course": "MEng Mechanical Engineering",
+            "image": "/images/team-members/2024-2025/greta.png"
+          }
+        ]
+      }
+    ],
+    "departments": [
+      {
+        "name": "Mechanical Systems",
+        "groups": [
+          {
+            "name": "Chassis",
+            "members": [
+              {
+                "name": "Anthiya",
+                "role": "Head of Chassis",
+                "course": "MEng Mechanical Engineering",
+                "image": "/images/team-members/2024-2025/anthiya.png"
+              }
+            ]
+          },
+          {
+            "name": "Suspension",
+            "members": [
+              {
+                "name": "Ibraheem",
+                "role": "Head of Suspension and Technical Advisor",
+                "course": "MEng Mechanical Engineering",
+                "image": "/images/team-members/2024-2025/ibraheem.png"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Performance",
+        "groups": [
+          {
+            "name": "Aerodynamics",
+            "members": [
+              {
+                "name": "George",
+                "role": "Head of Aerodynamics",
+                "course": "MEng Aeronautical Engineering",
+                "image": "/images/team-members/2024-2025/george.png"
+              }
+            ]
+          },
+          {
+            "name": "Rear Wing",
+            "members": [
+              {
+                "name": "Ahmed",
+                "role": "Head of Rear Wing",
+                "course": "MEng Aeronautical Engineering",
+                "image": "/images/team-members/2024-2025/ahmed.png"
+              }
+            ]
+          },
+          {
+            "name": "Front Wing",
+            "members": [
+              {
+                "name": "Hassaan",
+                "role": "Head of Front Wing",
+                "course": "MEng Aeronautical Engineering",
+                "image": "/images/team-members/2024-2025/hassaan.png"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Powertrain",
+        "members": [
+          {
+            "name": "Janisan",
+            "role": "Head of Powertrain",
+            "course": "MEng Mechanical Engineering",
+            "image": "/images/team-members/2024-2025/janisan.png"
+          }
+        ]
+      },
+      {
+        "name": "Electrical Systems",
+        "indentGroups": true,
+        "groups": [
+          {
+            "name": "High Voltage",
+            "members": [
+              {
+                "name": "Benjamin",
+                "role": "Co-Head of High Voltage",
+                "course": "MEng Mechanical Engineering",
+                "image": "/images/team-members/2024-2025/benjamin.png"
+              },
+              {
+                "name": "Ryan",
+                "role": "Co-Head of High Voltage",
+                "course": "MSc Robotics, AI and Autonomous Systems",
+                "image": "/images/team-members/2024-2025/ryan.png"
+              }
+            ]
+          },
+          {
+            "name": "Low Voltage",
+            "members": [
+              {
+                "name": "Deedat",
+                "role": "Co-Head of Low Voltage",
+                "course": "Electrical and Electronic Engineering",
+                "image": "/images/team-members/2024-2025/deedat.png"
+              },
+              {
+                "name": "Gustavo",
+                "role": "Co-Head of Low Voltage",
+                "course": "Electrical and Electronic Engineering",
+                "image": "/images/team-members/2024-2025/gustavo.png"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Software",
+        "members": [
+          {
+            "name": "Zack",
+            "role": "Head of Software",
+            "course": "MSci Computer Science",
+            "image": "/images/team-members/2024-2025/zack.png"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Firmware and Data Acquisitions",
+            "members": [
+              {
+                "name": "James",
+                "role": "Co-Head of Firmware and Data Acquisitions",
+                "course": "BSc Computer Science",
+                "image": "/images/team-members/2024-2025/james.png"
+              },
+              {
+                "name": "Blessing",
+                "role": "Co-Head of Firmware and Data Acquisitions",
+                "course": "MSci Computer Science",
+                "image": "/images/team-members/2024-2025/blessing.png"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Operations",
+        "members": [
+          {
+            "name": "Sabrina",
+            "role": "Head of Media and Marketing",
+            "course": "LLB Law",
+            "image": "/images/team-members/2024-2025/sabrina.png"
+          }
+        ]
+      }
+    ]
+  },
+  "fsuk-class-1-2025-2026": {
+    "theme": "light",
+    "tagline": "Bringing to you the team that brought us our first-ever EV.",
+    "leadership": [
+      {
+        "name": "Team Principal",
+        "members": [
+          { "name": "Ubhay Ahmed", "role": "Team Principal", "course": "MEng Systems Engineering" }
+        ]
+      }
+    ],
+    "departments": [
+      {
+        "name": "Mechanical Systems",
+        "members": [
+          {
+            "name": "Hamza Waqas",
+            "role": "Head of Mechanical Systems",
+            "course": "BEng Aerospace Engineering"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Chassis",
+            "members": [
+              {
+                "name": "Daniel Ronnau-Bradbeer",
+                "role": "Chassis Lead",
+                "course": "MEng Mechanical & Design Engineering"
+              }
+            ]
+          },
+          {
+            "name": "SSB",
+            "members": [{ "name": "Lorenzo Donati", "role": "SSB Lead", "course": "MEng Mechanical Engineering" }]
+          }
+        ]
+      },
+      {
+        "name": "Performance",
+        "members": [
+          {
+            "name": "Bartosz Cholewinski",
+            "role": "Head of Performance",
+            "course": "MEng Aerospace Engineering"
+          }
+        ]
+      },
+      {
+        "name": "Powertrain",
+        "members": [
+          {
+            "name": "Muhammad Bilal",
+            "role": "Head of Powertrain",
+            "course": "MEng Mechanical & Design Engineering"
+          }
+        ]
+      },
+      {
+        "name": "Electrical Systems",
+        "members": [
+          { "name": "Ubhay Ahmed", "role": "Head of Electrical Systems", "course": "MEng Systems Engineering" }
+        ]
+      },
+      {
+        "name": "Software",
+        "members": [
+          { "name": "Blessing Emmanuel", "role": "Head of Software", "course": "MSci Computer Science" }
+        ],
+        "groups": [
+          {
+            "name": "Firmware",
+            "members": [{ "name": "Liam Christian", "role": "Firmware Lead", "course": "Computer Science" }]
+          },
+          {
+            "name": "Data Acquisition",
+            "members": [
+              {
+                "name": "Zoya Sultana Fahd",
+                "role": "Data Acquisition Lead",
+                "course": "BSc Mathematics with Data Science"
+              },
+              { "name": "Bushra Aalia", "role": "Team Member", "course": "BSc Mathematics" },
+              { "name": "Ali Bars", "role": "Team Member", "course": "BSc Computer Science" },
+              { "name": "Calum Breen-Chapman", "role": "Team Member", "course": "BSc Computer Science" }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Operations",
+        "members": [
+          {
+            "name": "Estella Threadwell",
+            "role": "Head of Operations",
+            "course": "BEng Aerospace Engineering"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Team Coordinator",
+            "members": [
+              {
+                "name": "Raidah Khan",
+                "role": "Team Coordinator",
+                "course": "MEng Civil & Infrastructure Engineering"
+              }
+            ]
+          },
+          {
+            "name": "Media and Marketing",
+            "members": [
+              {
+                "name": "Manuela Blasquez Barrero",
+                "role": "Media Lead",
+                "course": "BEng Mechanical & Design Engineering"
+              },
+              { "name": "Zaynab Uddin", "role": "Team Member", "course": "BEng International Politics" }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

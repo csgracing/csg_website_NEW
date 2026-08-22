@@ -37,7 +37,7 @@ export function Hero() {
         </p>
         <div className="mt-12 flex gap-4">
           <Link
-            href="/contact-us"
+            href="/contact-us#get-in-touch"
             className="border border-brand px-6 py-3 text-sm font-semibold tracking-wide uppercase transition-colors hover:bg-brand"
           >
             Get In Touch
@@ -46,8 +46,6 @@ export function Hero() {
 
       </div>
 
-      {/* CSG watermark and car, both anchored to the bottom of the hero and
-          sized in vh so they aren't starved by the text block above. */}
       <div className="pointer-events-none absolute inset-x-0 bottom-0 z-0 flex h-[45vh] items-center justify-center overflow-hidden select-none sm:h-[58vh]">
         <svg
           className="h-auto w-full"

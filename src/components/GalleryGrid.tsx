@@ -10,17 +10,8 @@ export type GallerySeason = {
   count: number;
 };
 
-// How long the floating season pill stays visible after the last scroll
-// event before it starts fading out — mirrors the iOS Photos app's date
-// scrubber. The fade itself is a separate, slower transition (see
-// transition-opacity below) so it disappears gradually, not abruptly.
 const PILL_HIDE_DELAY_MS = 500;
 
-// Repeating cycle of tile shapes (in grid cells) so the gallery reads as a
-// varied mosaic instead of a uniform grid — mixes squares, wide, and tall
-// rectangles. Cycled by index, not randomised, so layout is stable across
-// re-renders. Only kicks in at sm+ — mobile stays a plain square grid, since
-// there isn't enough column width for the variation to read as intentional.
 const TILE_SHAPES = [
   "sm:col-span-2 sm:row-span-2",
   "",
@@ -36,16 +27,12 @@ const TILE_SHAPES = [
 
 export function GalleryGrid({ seasons }: { seasons: GallerySeason[] }) {
   const sectionRefs = useRef<Map<string, HTMLElement>>(new Map());
-  // undefined = not currently inside any season's image section (e.g. still
-  // up in the Gallery title/hero) — the pill has nothing to show then.
   const [activeSlug, setActiveSlug] = useState<string | undefined>(undefined);
   const entryBySlug = useRef<Map<string, IntersectionObserverEntry>>(new Map());
   const [pillVisible, setPillVisible] = useState(false);
   const [footerInView, setFooterInView] = useState(false);
   const hideTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  // Hide the pill once the footer is on screen — there's no season left to
-  // be scrubbing through at that point.
   useEffect(() => {
     const footer = document.querySelector("footer");
     if (!footer) return;
@@ -58,17 +45,12 @@ export function GalleryGrid({ seasons }: { seasons: GallerySeason[] }) {
     return () => observer.disconnect();
   }, []);
 
-  // Track whichever season section currently sits in a thin band around
-  // the vertical center of the viewport.
   useEffect(() => {
     const sections = Array.from(sectionRefs.current.values());
     if (sections.length === 0) return;
 
     const observer = new IntersectionObserver(
       (entries) => {
-        // The callback only reports entries whose intersection just changed,
-        // not every observed section — so track full state ourselves to know
-        // whether *anything* is currently in the band, not just what moved.
         entries.forEach((entry) => {
           const slug = entry.target.getAttribute("data-season-slug");
           if (slug) entryBySlug.current.set(slug, entry);
@@ -89,7 +71,6 @@ export function GalleryGrid({ seasons }: { seasons: GallerySeason[] }) {
     return () => observer.disconnect();
   }, [seasons]);
 
-  // Show the pill while scrolling, hide it a moment after scrolling stops.
   useEffect(() => {
     function handleScroll() {
       setPillVisible(true);
@@ -108,7 +89,6 @@ export function GalleryGrid({ seasons }: { seasons: GallerySeason[] }) {
 
   return (
     <div className="relative">
-      {/* Floating "which season am I looking at" pill, Photos-app style. */}
       <div
         aria-hidden="true"
         className={`pointer-events-none fixed inset-x-0 top-24 z-40 flex justify-center transition-opacity duration-500 ${

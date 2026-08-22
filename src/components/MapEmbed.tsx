@@ -13,8 +13,6 @@ const LocationMap = dynamic(() => import("./LocationMap").then((mod) => mod.Loca
   ),
 });
 
-// OSM/CARTO's free-tile terms require this credit somewhere; collapsed to
-// a small "i" badge that expands on click instead of a permanent strip.
 function MapAttribution() {
   const [expanded, setExpanded] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
@@ -65,16 +63,10 @@ function MapAttribution() {
 }
 
 export function MapEmbed() {
-  // The Footer lives in the root layout and never unmounts on client-side
-  // navigation, so key the map on pathname to reset it to its default view
-  // (rather than keeping whatever pan state a visitor left it in) on every
-  // route change.
   const pathname = usePathname();
 
   return (
-    // Only rounded/shadowed element on the site (rest favours sharp edges)
-    // — a plain rectangle read too much like a raw Google Maps embed.
-    <div className="relative h-80 w-full overflow-hidden rounded-2xl border border-black/10 shadow-lg shadow-black/20 sm:h-96">
+    <div className="relative h-56 w-full overflow-hidden rounded-2xl border border-black/10 shadow-lg shadow-black/20 sm:h-72">
       <LocationMap key={pathname} />
       <MapAttribution />
     </div>

@@ -1,14 +1,9 @@
-// Spec sheet — a label/value list flanked by two small image placeholders
-// (left/right on larger screens, stacked above/below on mobile). Exact
-// placement of the images is still undecided, so this is a rough starting
-// layout to swap around once that's settled.
 const PLACEHOLDER_SPECS = [
-  { label: "Weight", value: "TBD" },
-  { label: "Engine", value: "TBD" },
-  { label: "Power", value: "TBD" },
-  { label: "0–100 km/h", value: "TBD" },
-  { label: "Chassis", value: "TBD" },
-  { label: "Drivetrain", value: "TBD" },
+  { label: "Weight", value: "250 kg" },
+  { label: "Motor", value: "ME1616" },
+  { label: "Power", value: "51 kW" },
+  { label: "Torque", value: "120 Nm peak" },
+  { label: "Acceleration", value: "4.84 s" },
 ];
 
 export function CarSpecs() {

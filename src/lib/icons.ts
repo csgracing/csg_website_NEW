@@ -1,5 +1,3 @@
-// Outline icons from Tabler Icons (MIT licensed) — kept in one consistent
-// 24x24 stroke style so every icon on the site reads as the same set.
 export const iconPaths: Record<string, string[]> = {
   instagram: [
     "M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4l0 -8",

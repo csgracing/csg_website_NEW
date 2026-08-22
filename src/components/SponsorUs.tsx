@@ -7,7 +7,7 @@ export function SponsorUs() {
       <p className="mt-4 text-white/70">Get in touch and let&apos;s talk about partnering up.</p>
 
       <Link
-        href="/contact-us"
+        href="/contact-us#get-in-touch"
         className="mt-8 border border-brand px-6 py-3 text-sm font-semibold tracking-wide uppercase transition-colors hover:bg-brand"
       >
         Get In Touch

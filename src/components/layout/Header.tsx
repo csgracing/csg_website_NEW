@@ -8,8 +8,6 @@ import { Icon } from "@/components/Icon";
 import type { SeasonEntry } from "@/types/season";
 
 const site = getSiteConfig();
-// Email lives in the footer's Contact Us instead — not a "follow us"
-// platform, and avoids exposing a scrapeable mailto. Facebook takes its spot.
 const socials = getSocialLinks().filter((social) => social.platform !== "email");
 
 const dropdownEntries: Record<"cars" | "teams", SeasonEntry[]> = {
@@ -19,12 +17,10 @@ const dropdownEntries: Record<"cars" | "teams", SeasonEntry[]> = {
 
 const navLinkClass = "py-0.5 transition-[padding,color] duration-300 hover:px-3 hover:text-brand";
 
-// Never hide while still this close to the top of the page.
 const TOP_THRESHOLD_PX = 120;
 
 function SocialIcons({ className = "" }: { className?: string }) {
   return (
-    // gap-3 on both axes so the 2x2 grid stays square, not wider than tall.
     <div className={`grid shrink-0 grid-cols-2 grid-rows-2 gap-3 ${className}`}>
       {socials.map((social) => (
         <a
@@ -80,9 +76,6 @@ export function Header() {
     >
       <nav className="flex items-center justify-between gap-6 px-6 py-3">
         <div className="flex items-center gap-6">
-          {/* Plain <a>, not next/link: forces a full navigation so the
-              footer map (and any other page state) always resets, even
-              when already on "/" where a Link would be a client-side no-op. */}
           <a href="/" className="flex shrink-0 items-center" aria-label={`${site.shortName} home`}>
             <Image
               src="/images/csg-racing-logo.png"
