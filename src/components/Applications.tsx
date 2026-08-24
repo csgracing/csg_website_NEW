@@ -41,6 +41,11 @@ export function Applications() {
           Applications are first come, first served, so don&apos;t wait, apply today and take your
           first step onto the team.
         </p>
+        <p className="mx-auto mt-4 max-w-2xl text-center text-sm text-black/50 italic">
+          We aren&apos;t currently recruiting for Performance (including Aerodynamics and Cooling
+          Systems) — if you&apos;re interested, note this on your application and we&apos;ll alert
+          you when recruitment reopens. We are still recruiting for Vehicle Dynamics.
+        </p>
 
         <div className="mt-12 flex flex-col items-center gap-16">
           <div className="flex flex-col items-center gap-3">
