@@ -182,7 +182,12 @@
       {
         "name": "Team Principal",
         "members": [
-          { "name": "Ubhay Ahmed", "role": "Team Principal", "course": "MEng Systems Engineering" }
+          {
+            "name": "Ubhay Ahmed",
+            "role": "Team Principal",
+            "course": "MEng Systems Engineering",
+            "image": "/images/team-members/2025-2026/ubhay.jpg"
+          }
         ]
       }
     ],
@@ -193,7 +198,8 @@
           {
             "name": "Hamza Waqas",
             "role": "Head of Mechanical Systems",
-            "course": "BEng Aerospace Engineering"
+            "course": "BEng Aerospace Engineering",
+            "image": "/images/team-members/2025-2026/hamza.jpg"
           }
         ],
         "groups": [
@@ -203,13 +209,21 @@
               {
                 "name": "Daniel Ronnau-Bradbeer",
                 "role": "Chassis Lead",
-                "course": "MEng Mechanical & Design Engineering"
+                "course": "MEng Mechanical & Design Engineering",
+                "image": "/images/team-members/2025-2026/daniel.jpg"
               }
             ]
           },
           {
-            "name": "SSB",
-            "members": [{ "name": "Lorenzo Donati", "role": "SSB Lead", "course": "MEng Mechanical Engineering" }]
+            "name": "Suspension, Steering & Brakes (SSB)",
+            "members": [
+              {
+                "name": "Lorenzo Donati",
+                "role": "SSB Lead",
+                "course": "MEng Mechanical Engineering",
+                "image": "/images/team-members/2025-2026/lorenzo.jpg"
+              }
+            ]
           }
         ]
       },
@@ -219,7 +233,32 @@
           {
             "name": "Bartosz Cholewinski",
             "role": "Head of Performance",
-            "course": "MEng Aerospace Engineering"
+            "course": "MEng Aerospace Engineering",
+            "image": "/images/team-members/2025-2026/bartosz.jpg"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Aerodynamics",
+            "members": [
+              {
+                "name": "Bartosz Cholewinski",
+                "role": "Aerodynamics Lead",
+                "course": "MEng Aerospace Engineering",
+                "image": "/images/team-members/2025-2026/bartosz.jpg"
+              }
+            ]
+          },
+          {
+            "name": "Vehicle Dynamics",
+            "members": [
+              {
+                "name": "Tamjeed Tawsif",
+                "role": "Vehicle Dynamics Lead",
+                "course": "MEng Aerospace Engineering",
+                "image": "/images/team-members/2025-2026/tamjeed.jpg"
+              }
+            ]
           }
         ]
       },
@@ -229,32 +268,43 @@
           {
             "name": "Muhammad Bilal",
             "role": "Head of Powertrain",
-            "course": "MEng Mechanical & Design Engineering"
+            "course": "MEng Mechanical & Design Engineering",
+            "image": "/images/team-members/2025-2026/bilal.jpg"
           }
         ]
       },
       {
         "name": "Electrical Systems",
         "members": [
-          { "name": "Ubhay Ahmed", "role": "Head of Electrical Systems", "course": "MEng Systems Engineering" }
+          {
+            "name": "Ubhay Ahmed",
+            "role": "Head of Electrical Systems",
+            "course": "MEng Systems Engineering",
+            "image": "/images/team-members/2025-2026/ubhay.jpg"
+          }
         ]
       },
       {
         "name": "Software",
         "members": [
-          { "name": "Blessing Emmanuel", "role": "Head of Software", "course": "MSci Computer Science" }
+          {
+            "name": "Blessing Emmanuel",
+            "role": "Head of Software",
+            "course": "MSci Computer Science",
+            "image": "/images/team-members/2025-2026/blessing.jpg"
+          }
         ],
         "groups": [
           {
             "name": "Firmware",
-            "members": [{ "name": "Liam Christian", "role": "Firmware Lead", "course": "Computer Science" }]
+            "members": [{ "name": "Liam Christian", "role": "Firmware Lead", "course": "MSci Computer Science" }]
           },
           {
-            "name": "Data Acquisition",
+            "name": "Data Acquisition (DAQ)",
             "members": [
               {
                 "name": "Zoya Sultana Fahd",
-                "role": "Data Acquisition Lead",
+                "role": "DAQ Lead",
                 "course": "BSc Mathematics with Data Science"
               },
               { "name": "Bushra Aalia", "role": "DAQ Team Member", "course": "BSc Mathematics" },
@@ -270,7 +320,8 @@
           {
             "name": "Estella Threadwell",
             "role": "Head of Operations",
-            "course": "BEng Aerospace Engineering"
+            "course": "BEng Aerospace Engineering",
+            "image": "/images/team-members/2025-2026/estella.jpg"
           }
         ],
         "groups": [
@@ -280,20 +331,33 @@
               {
                 "name": "Raidah Khan",
                 "role": "Team Coordinator",
-                "course": "MEng Civil & Infrastructure Engineering"
+                "course": "MEng Civil & Infrastructure Engineering",
+                "image": "/images/team-members/2025-2026/raidah.jpg"
               }
             ]
           },
           {
-            "name": "Media and Marketing",
+            "name": "Media and Marketing (M&M)",
             "members": [
               {
                 "name": "Manuela Blasquez Barrero",
-                "role": "Media & Marketing Lead",
-                "course": "BEng Mechanical & Design Engineering"
+                "role": "M&M Lead",
+                "course": "BEng Mechanical & Design Engineering",
+                "image": "/images/team-members/2025-2026/manuela.jpg"
               },
               { "name": "Zaynab Uddin", "role": "M&M Team Member", "course": "BEng International Politics" }
             ]
+          }
+        ]
+      },
+      {
+        "name": "Technical Advisor",
+        "members": [
+          {
+            "name": "James Cahill",
+            "role": "Technical Advisor",
+            "course": "BSc Computer Science",
+            "image": "/images/team-members/2025-2026/james.jpg"
           }
         ]
       }
