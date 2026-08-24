@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { Icon } from "@/components/Icon";
 
 export type GallerySeason = {
@@ -8,6 +9,7 @@ export type GallerySeason = {
   label: string;
   shortLabel: string;
   count: number;
+  images?: string[];
 };
 
 const PILL_HIDE_DELAY_MS = 500;
@@ -123,9 +125,18 @@ export function GalleryGrid({ seasons }: { seasons: GallerySeason[] }) {
                     TILE_SHAPES[index % TILE_SHAPES.length]
                   }`}
                 >
-                  <div className="flex h-full w-full items-center justify-center text-white/15">
-                    <Icon name="photo" className="h-8 w-8" />
-                  </div>
+                  {season.images?.[index] ? (
+                    <Image
+                      src={season.images[index]}
+                      alt={`${season.label} photo ${index + 1}`}
+                      fill
+                      style={{ objectFit: "cover" }}
+                    />
+                  ) : (
+                    <div className="flex h-full w-full items-center justify-center text-white/15">
+                      <Icon name="photo" className="h-8 w-8" />
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
