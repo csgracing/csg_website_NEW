@@ -1,27 +1,6 @@
-"use client";
-
-import { useState } from "react";
 import { SwirlDecoration } from "@/components/SwirlDecoration";
 
-type Status = "idle" | "sending" | "sent" | "error";
-
 export function Applications() {
-  const [status, setStatus] = useState<Status>("idle");
-
-  async function handleApply() {
-    setStatus("sending");
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ type: "application" }),
-      });
-      setStatus(res.ok ? "sent" : "error");
-    } catch {
-      setStatus("error");
-    }
-  }
-
   return (
     <section
       id="applications"
@@ -34,28 +13,23 @@ export function Applications() {
       <div className="mx-auto w-full max-w-6xl">
         <p className="text-center text-sm font-bold tracking-wide text-brand uppercase">Recruitment</p>
         <h2 className="mt-2 text-center font-black tracking-tight uppercase">
-          <span className="block text-3xl sm:text-5xl">Applications Are Now Open</span>
+          <span className="block text-3xl sm:text-5xl">Applications Aren&apos;t Open Yet</span>
           <span className="mt-1 block text-lg text-black/60 sm:text-2xl">For The 2026/27 Season</span>
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-center text-black/60">
-          Applications are first come, first served, so don&apos;t wait, apply today and take your
-          first step onto the team.
+          We&apos;re not accepting applications just yet, but they&apos;ll be opening soon. Check
+          back here or follow us on social media for updates.
         </p>
 
         <div className="mt-12 flex flex-col items-center gap-16">
           <div className="flex flex-col items-center gap-3">
             <button
               type="button"
-              onClick={handleApply}
-              disabled={status === "sending" || status === "sent"}
-              className="border border-brand px-8 py-4 text-sm font-semibold tracking-wide uppercase transition-colors hover:bg-brand hover:text-white disabled:cursor-default disabled:opacity-60 disabled:hover:bg-transparent disabled:hover:text-inherit"
+              disabled
+              className="cursor-not-allowed border border-brand/40 px-8 py-4 text-sm font-semibold tracking-wide text-black/40 uppercase opacity-60"
             >
-              {status === "sent" ? "Application Sent" : "Apply Now"}
+              Applications Closed
             </button>
-            {status === "sent" && <p className="text-sm text-black/60">Thanks! We&apos;ll be in touch.</p>}
-            {status === "error" && (
-              <p className="text-sm text-black/60">Something went wrong, please try again shortly.</p>
-            )}
           </div>
 
           <div className="flex w-full max-w-xl flex-col items-center border border-dashed border-black/20 bg-black/5 p-8 text-center">
