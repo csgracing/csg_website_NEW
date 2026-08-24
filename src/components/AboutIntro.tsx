@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export function AboutIntro() {
   return (
     <section className="flex flex-col justify-center bg-white px-6 pt-16 pb-24 text-[#0d0d0d]">
@@ -18,8 +20,13 @@ export function AboutIntro() {
             </p>
           </div>
 
-          <div className="flex aspect-[4/3] w-full items-center justify-center border border-dashed border-black/20 bg-black/5 text-sm text-black/40 uppercase">
-            Image placeholder
+          <div className="relative aspect-[4/3] w-full overflow-hidden">
+            <Image
+              src="/images/about/who-we-are.jpg"
+              alt="The full CSG Racing team at Silverstone"
+              fill
+              style={{ objectFit: "cover" }}
+            />
           </div>
         </div>
       </div>
