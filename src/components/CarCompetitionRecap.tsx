@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Icon } from "@/components/Icon";
 
@@ -30,8 +31,13 @@ export function CarCompetitionRecap() {
             </Link>
           </div>
 
-          <div className="flex aspect-[4/3] w-full items-center justify-center border border-dashed border-black/20 bg-black/5 text-sm text-black/40 uppercase">
-            Image placeholder
+          <div className="relative aspect-[4/3] w-full overflow-hidden">
+            <Image
+              src="/images/cars/garage-placard-v2.jpg"
+              alt="Our garage placard at Silverstone, garage 19, City, University of London / CSG Racing"
+              fill
+              style={{ objectFit: "cover" }}
+            />
           </div>
         </div>
       </div>

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const PLACEHOLDER_SPECS = [
   { label: "Weight", value: "250 kg" },
   { label: "Motor", value: "ME1616" },
@@ -10,8 +12,8 @@ export function CarSpecs() {
   return (
     <section className="bg-background px-6 py-16 sm:py-20">
       <div className="mx-auto grid w-full max-w-6xl items-center gap-10 lg:grid-cols-[1fr_auto_1fr] lg:gap-16">
-        <div className="mx-auto flex aspect-square w-full max-w-xs items-center justify-center border border-dashed border-white/20 bg-white/5 text-sm text-white/40 uppercase">
-          Image placeholder
+        <div className="relative mx-auto aspect-square w-full max-w-xs overflow-hidden">
+          <Image src="/images/cars/workshop-1.jpg" alt="Team working on the car in the workshop" fill style={{ objectFit: "cover" }} />
         </div>
 
         <div className="w-full lg:w-80">
@@ -31,8 +33,8 @@ export function CarSpecs() {
           </dl>
         </div>
 
-        <div className="mx-auto flex aspect-square w-full max-w-xs items-center justify-center border border-dashed border-white/20 bg-white/5 text-sm text-white/40 uppercase">
-          Image placeholder
+        <div className="relative mx-auto aspect-square w-full max-w-xs overflow-hidden">
+          <Image src="/images/cars/workshop-2.jpg" alt="Team member assembling the car chassis" fill style={{ objectFit: "cover" }} />
         </div>
       </div>
     </section>
