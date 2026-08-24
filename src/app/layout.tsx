@@ -18,6 +18,7 @@ const geistMono = Geist_Mono({
 const site = getSiteConfig();
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://csg.racing"),
   title: site.name,
   description: site.description,
 };
