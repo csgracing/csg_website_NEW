@@ -31,7 +31,7 @@ export async function POST(request: Request) {
 
   try {
     await resend.emails.send({
-      from: "CSG Racing Website <onboarding@resend.dev>",
+      from: "CSG Racing Website <noreply@csg.racing>",
       to: TEAM_EMAIL,
       replyTo: email || undefined,
       subject,
