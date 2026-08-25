@@ -1,27 +1,9 @@
-"use client";
-
-import { useState } from "react";
 import { SwirlDecoration } from "@/components/SwirlDecoration";
 
-type Status = "idle" | "sending" | "sent" | "error";
+const APPLICATION_FORM_URL =
+  "https://cityuni-my.sharepoint.com/:l:/g/personal/raidah_khan_city_ac_uk/JAADzTMsWDmHT4eQmAzZmQ-8AeceMKV_Ww35VRhmBTbhE9o?nav=MmI5MzE4MTgtNmQ1OC00MjM2LWE4YWMtMDY5ZGQ0NWJlMDNh";
 
 export function Applications() {
-  const [status, setStatus] = useState<Status>("idle");
-
-  async function handleApply() {
-    setStatus("sending");
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ type: "application" }),
-      });
-      setStatus(res.ok ? "sent" : "error");
-    } catch {
-      setStatus("error");
-    }
-  }
-
   return (
     <section
       id="applications"
@@ -44,18 +26,14 @@ export function Applications() {
 
         <div className="mt-12 flex flex-col items-center gap-16">
           <div className="flex flex-col items-center gap-3">
-            <button
-              type="button"
-              onClick={handleApply}
-              disabled={status === "sending" || status === "sent"}
-              className="border border-brand px-8 py-4 text-sm font-semibold tracking-wide uppercase transition-colors hover:bg-brand hover:text-white disabled:cursor-default disabled:opacity-60 disabled:hover:bg-transparent disabled:hover:text-inherit"
+            <a
+              href={APPLICATION_FORM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border border-brand px-8 py-4 text-sm font-semibold tracking-wide uppercase transition-colors hover:bg-brand hover:text-white"
             >
-              {status === "sent" ? "Application Sent" : "Apply Now"}
-            </button>
-            {status === "sent" && <p className="text-sm text-black/60">Thanks! We&apos;ll be in touch.</p>}
-            {status === "error" && (
-              <p className="text-sm text-black/60">Something went wrong, please try again shortly.</p>
-            )}
+              Apply Now
+            </a>
           </div>
 
           <div className="flex w-full max-w-xl flex-col items-center border border-dashed border-black/20 bg-black/5 p-8 text-center">
