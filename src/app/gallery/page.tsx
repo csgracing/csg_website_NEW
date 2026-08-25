@@ -13,6 +13,7 @@ const DEFAULT_PLACEHOLDER_COUNT = 25;
 // overwritten) so browsers that cached the old bytes under the original filename aren't stuck.
 const RENAMED_GALLERY_FILES_2025_2026: Record<number, string> = {
   15: "photo-15-v3.jpg",
+  16: "photo-16-v2.jpg",
   17: "photo-17-v2.jpg",
   45: "photo-45-v2.jpg",
 };
