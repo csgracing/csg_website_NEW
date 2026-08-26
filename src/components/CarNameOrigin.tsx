@@ -4,15 +4,14 @@ export function CarNameOrigin() {
       <div className="mx-auto w-full max-w-3xl text-center">
         <p className="text-sm font-bold tracking-wide text-brand uppercase">Where The Name Comes From</p>
         <h2 className="mt-2 text-4xl font-black tracking-tight uppercase sm:text-5xl">
-          Named After The Person Who Brought Us Back
+          Named After The Team That Built It
         </h2>
         <p className="mt-7 text-lg leading-relaxed text-black/60">
-          GRETA is named after our former team principal, who founded City St George&apos;s Formula
-          Student team from scratch and led us to Silverstone as a Concept entry in the 2024/25
-          season, our first appearance in seven years. They stayed on as a supervisor through the
-          following season, guiding the team as we grew from concept to competitor, work that
-          culminated in our first competition car. GRETA carries their name in recognition of
-          everything they built to get us here.
+          CSGR-01 is named after CSG Racing itself: CSGR for the team, and 01 because it&apos;s our
+          first-ever competition car. It marks the culmination of reviving City St
+          George&apos;s Formula Student team from scratch, from our first Silverstone entry in
+          seven years as a Concept entry in the 2024/25 season, to fielding a full competitor the
+          following season.
         </p>
       </div>
     </section>
