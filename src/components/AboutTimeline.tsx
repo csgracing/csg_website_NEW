@@ -17,7 +17,7 @@ const TIMELINE: TimelineEntry[] = [
   { type: "marker", label: "7-Year Hiatus", icon: "hiatus" },
   { type: "marker", label: "Rebrand", icon: "rebrand" },
   { type: "car", season: "2024/25", name: "Concept", image: "/images/history/concept.jpg", imageAspect: "16/9" },
-  { type: "car", season: "2025/26", name: "GRETA (CSG26)", image: "/images/history/greta.jpg", latest: true },
+  { type: "car", season: "2025/26", name: "CSGR-01 (CSG26)", image: "/images/history/greta.jpg", latest: true },
   { type: "marker", label: "Today", icon: "today" },
 ];
 

@@ -9,7 +9,7 @@ export function CarShowcase({ carName }: { carName: string }) {
         <div className="relative mx-auto mt-6 aspect-video w-full overflow-hidden">
           <Image
             src="/images/cars/greta-showcase-v2.jpg"
-            alt="GRETA, the CSG Racing car, at Silverstone"
+            alt="CSGR-01, the CSG Racing car, at Silverstone"
             fill
             style={{ objectFit: "cover" }}
             priority
