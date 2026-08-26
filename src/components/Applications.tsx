@@ -1,7 +1,7 @@
 import { SwirlDecoration } from "@/components/SwirlDecoration";
 
 const APPLICATION_FORM_URL =
-  "https://cityuni-my.sharepoint.com/personal/raidah_khan_city_ac_uk/_layouts/15/listforms.aspx?cid=MmMzM2NkMDMtMzk1OC00Zjg3LTg3OTAtOTgwY2Q5OTkwZmJj&nav=MmI5MzE4MTgtNmQ1OC00MjM2LWE4YWMtMDY5ZGQ0NWJlMDNh";
+  "https://cityuni-my.sharepoint.com/:l:/g/personal/raidah_khan_city_ac_uk/JAADzTMsWDmHT4eQmAzZmQ-8AeceMKV_Ww35VRhmBTbhE9o?nav=MmI5MzE4MTgtNmQ1OC00MjM2LWE4YWMtMDY5ZGQ0NWJlMDNh";
 
 export function Applications() {
   return (
