@@ -31,15 +31,6 @@ function MapAttribution() {
       {expanded && (
         <p className="mr-1.5 rounded-full bg-black/70 px-2.5 py-1 text-[10px] leading-none whitespace-nowrap text-white/70 backdrop-blur-sm">
           <a
-            href="https://www.esri.com/en-us/legal/terms/data-attributions"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline hover:text-white"
-          >
-            © Esri
-          </a>{" "}
-          &mdash; HERE, Garmin,{" "}
-          <a
             href="https://www.openstreetmap.org/copyright"
             target="_blank"
             rel="noopener noreferrer"
@@ -47,7 +38,15 @@ function MapAttribution() {
           >
             © OpenStreetMap
           </a>{" "}
-          contributors
+          contributors{" "}
+          <a
+            href="https://carto.com/attributions"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-white"
+          >
+            © CARTO
+          </a>
         </p>
       )}
       <button

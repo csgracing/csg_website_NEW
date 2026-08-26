@@ -8,7 +8,7 @@ import { getSiteConfig } from "@/lib/data";
 
 const position: [number, number] = [51.5277, -0.1024];
 
-const TILE_URL = "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}";
+const TILE_URL = "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png";
 
 const MASCOT_ICON_URL = "/images/mascot-pin.svg";
 const MASCOT_ICON_SIZE: [number, number] = [50, 62];
