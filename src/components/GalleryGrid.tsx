@@ -9,7 +9,7 @@ export type GallerySeason = {
   label: string;
   shortLabel: string;
   count: number;
-  images?: string[];
+  images?: (string | undefined)[];
 };
 
 const PILL_HIDE_DELAY_MS = 500;
