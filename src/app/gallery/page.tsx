@@ -22,17 +22,32 @@ const RENAMED_GALLERY_FILES_2024_2025: Record<number, string> = {
   23: "photo-23-v2.jpg",
 };
 
-function galleryPhotos(folder: string, count: number, renamed: Record<number, string> = {}) {
+// Photos pulled after publishing; kept as empty slots (rather than removed outright) so the
+// grid still shows a placeholder in their place instead of shifting every later photo up.
+const REMOVED_GALLERY_PHOTOS_2024_2025 = new Set([7, 12, 21]);
+
+function galleryPhotos(
+  folder: string,
+  count: number,
+  renamed: Record<number, string> = {},
+  removed: Set<number> = new Set(),
+) {
   return Array.from({ length: count }, (_, i) => {
     const n = i + 1;
+    if (removed.has(n)) return undefined;
     const file = renamed[n] ?? `photo-${String(n).padStart(2, "0")}.jpg`;
     return `/images/gallery/${folder}/${file}`;
   });
 }
 
-const REAL_PHOTOS_BY_SLUG: Record<string, string[]> = {
+const REAL_PHOTOS_BY_SLUG: Record<string, (string | undefined)[]> = {
   "fsuk-class-1-2025-2026": galleryPhotos("2025-2026", 50, RENAMED_GALLERY_FILES_2025_2026),
-  "fsuk-concept-2024-2025": galleryPhotos("2024-2025", 40, RENAMED_GALLERY_FILES_2024_2025),
+  "fsuk-concept-2024-2025": galleryPhotos(
+    "2024-2025",
+    40,
+    RENAMED_GALLERY_FILES_2024_2025,
+    REMOVED_GALLERY_PHOTOS_2024_2025,
+  ),
 };
 
 export default function GalleryPage() {
