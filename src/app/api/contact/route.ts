@@ -10,15 +10,14 @@ export async function POST(request: Request) {
   }
 
   const body = await request.json();
-  const { type, name, email, reason, message } = body as {
-    type: "application" | "enquiry";
+  const { name, email, reason, message } = body as {
     name?: string;
     email?: string;
     reason?: string;
     message?: string;
   };
 
-  const subject = type === "application" ? "New application via csg.racing" : "New enquiry via csg.racing";
+  const subject = "New enquiry via csg.racing";
 
   const lines = [
     name && `Name: ${name}`,
