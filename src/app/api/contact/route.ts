@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const TEAM_EMAIL = "team@csg.racing";
+const TEAM_EMAIL = "enquiries@csg.racing";
 
 export async function POST(request: Request) {
   const apiKey = process.env.RESEND_API_KEY;
