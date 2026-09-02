@@ -224,6 +224,17 @@
                 "image": "/images/team-members/2025-2026/lorenzo.jpg"
               }
             ]
+          },
+          {
+            "name": "Powertrain",
+            "members": [
+              {
+                "name": "Muhammad Bilal",
+                "role": "Powertrain Lead",
+                "course": "MEng Mechanical & Design Engineering",
+                "image": "/images/team-members/2025-2026/bilal.jpg"
+              }
+            ]
           }
         ]
       },
@@ -259,17 +270,6 @@
                 "image": "/images/team-members/2025-2026/tamjeed.jpg"
               }
             ]
-          }
-        ]
-      },
-      {
-        "name": "Powertrain",
-        "members": [
-          {
-            "name": "Muhammad Bilal",
-            "role": "Head of Powertrain",
-            "course": "MEng Mechanical & Design Engineering",
-            "image": "/images/team-members/2025-2026/bilal.jpg"
           }
         ]
       },
