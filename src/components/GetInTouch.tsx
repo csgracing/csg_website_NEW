@@ -14,7 +14,8 @@ export function GetInTouch() {
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const form = new FormData(event.currentTarget);
+    const formEl = event.currentTarget;
+    const form = new FormData(formEl);
     setStatus("sending");
 
     try {
@@ -30,7 +31,7 @@ export function GetInTouch() {
         }),
       });
       setStatus(res.ok ? "sent" : "error");
-      if (res.ok) event.currentTarget.reset();
+      if (res.ok) formEl.reset();
     } catch {
       setStatus("error");
     }
